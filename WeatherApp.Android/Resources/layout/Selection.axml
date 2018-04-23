@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout1"
+        android:background="#545454">
+        <TextView
+            android:text="Search by Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/NameSearchLabel"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+        <EditText
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/NameSearchLabel"
+            android:id="@+id/SearchTermTextEntry"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@android:color/white" />
+        <Button
+            android:text="Get Results"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/SearchTermTextEntry"
+            android:id="@+id/SearchBtn"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:width="165dp" />
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:rowCount="5"
+            android:columnCount="2">
+            <TextView
+                android:text="Number of Results:"
+                android:textSize="14dip" />
+            <TextView
+                android:id="@+id/CountOfResults"
+                android:text="#"
+                android:textSize="14dip" />
+            <Button
+                android:text="RecipeName1"
+                android:id="@+id/ButtonResult1" />
+            <TextView
+                android:text="image placeholder"
+                android:textSize="14dip" />
+            <Button
+                android:text="RecipeName2"
+                android:id="@+id/ButtonResult2" />
+            <TextView
+                android:text="image placeholder"
+                android:textSize="14dip" />
+            <Button
+                android:text="RecipeName3"
+                android:id="@+id/ButtonResult3" />
+            <TextView
+                android:text="image placeholder"
+                android:textSize="14dip" />
+            <Button
+                android:text="RecipeName4"
+                android:id="@+id/ButtonResult4" />
+            <TextView
+                android:text="image placeholder"
+                android:textSize="14dip" />
+            <Button
+                android:text="RecipeName5"
+                android:id="@+id/ButtonResult5" />
+            <TextView
+                android:text="image placeholder"
+                android:textSize="14dip" />
+        </GridLayout>
+    </ScrollView>
+</LinearLayout>
