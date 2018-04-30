@@ -2,6 +2,8 @@
 using Android.App;
 using Android.Widget;
 using Android.OS;
+using Android.Views;
+
 
 namespace WeatherApp.Android
 {
@@ -34,6 +36,8 @@ namespace WeatherApp.Android
 
             Button ButtonResult5 = FindViewById<Button>(Resource.Id.ButtonResult5);
             ButtonResult5.Click += ButtonResult5_Click;
+
+
         }
 
 
@@ -62,19 +66,33 @@ namespace WeatherApp.Android
         // below fucntion happens whenenver search button is clicked on Selection layout
         private async void SearchButton_Click(object sender, EventArgs e)
         {
+
             EditText SearchTermTextEntry = FindViewById<EditText>(Resource.Id.SearchTermTextEntry);
+            CheckBox GlutenFree = FindViewById<CheckBox>(Resource.Id.GlutenFree);
+            CheckBox DairyFree = FindViewById<CheckBox>(Resource.Id.DairyFree);
+            CheckBox Vegetarian = FindViewById<CheckBox>(Resource.Id.Vegetarian);
 
             if (!String.IsNullOrEmpty(SearchTermTextEntry.Text))
             {
-                Recipe recipe = await Core.GetRecipe(SearchTermTextEntry.Text);
+                Recipe recipe = await Core.GetRecipe(SearchTermTextEntry.Text, GlutenFree.Checked, DairyFree.Checked, Vegetarian.Checked);
                 if (recipe != null)
                 {
 
                     FindViewById<TextView>(Resource.Id.ButtonResult1).Text = recipe.RecipeLabelContent1;
+                    FindViewById<TextView>(Resource.Id.ButtonResult1).Visibility = ViewStates.Visible;
+
                     FindViewById<TextView>(Resource.Id.ButtonResult2).Text = recipe.RecipeLabelContent2;
+                    FindViewById<TextView>(Resource.Id.ButtonResult2).Visibility = ViewStates.Visible;
+
                     FindViewById<TextView>(Resource.Id.ButtonResult3).Text = recipe.RecipeLabelContent3;
+                    FindViewById<TextView>(Resource.Id.ButtonResult3).Visibility = ViewStates.Visible;
+
                     FindViewById<TextView>(Resource.Id.ButtonResult4).Text = recipe.RecipeLabelContent4;
+                    FindViewById<TextView>(Resource.Id.ButtonResult4).Visibility = ViewStates.Visible;
+
                     FindViewById<TextView>(Resource.Id.ButtonResult5).Text = recipe.RecipeLabelContent5;
+                    FindViewById<TextView>(Resource.Id.ButtonResult5).Visibility = ViewStates.Visible;
+
                     FindViewById<TextView>(Resource.Id.CountOfResults).Text = recipe.CountOfResults;
 
                     // somewhere in this MainActivity.cs file you need to utilize picasso or glide to download images from URL
@@ -90,6 +108,9 @@ namespace WeatherApp.Android
         private async void ButtonResult1_Click(object sender, EventArgs e)
         {
             EditText SearchTermTextEntry = FindViewById<EditText>(Resource.Id.SearchTermTextEntry);
+            CheckBox GlutenFree = FindViewById<CheckBox>(Resource.Id.GlutenFree);
+            CheckBox DairyFree = FindViewById<CheckBox>(Resource.Id.DairyFree);
+            CheckBox Vegetarian = FindViewById<CheckBox>(Resource.Id.Vegetarian);
             SetContentView(Resource.Layout.IndividualView);
 
             Button ButtonBackToResults = FindViewById<Button>(Resource.Id.btnBackToSearchResults);
@@ -99,7 +120,7 @@ namespace WeatherApp.Android
 
             if (!String.IsNullOrEmpty(SearchTermTextEntry.Text))
             {
-                Recipe recipe = await Core.GetRecipe(SearchTermTextEntry.Text);
+                Recipe recipe = await Core.GetRecipe(SearchTermTextEntry.Text, GlutenFree.Checked, DairyFree.Checked, Vegetarian.Checked);
                 if (recipe != null)
                 {
                     FindViewById<TextView>(Resource.Id.RecipeNameResult).Text = recipe.RecipeLabelContent1;
@@ -113,6 +134,9 @@ namespace WeatherApp.Android
         private async void ButtonResult2_Click(object sender, EventArgs e)
         {
             EditText SearchTermTextEntry = FindViewById<EditText>(Resource.Id.SearchTermTextEntry);
+            CheckBox GlutenFree = FindViewById<CheckBox>(Resource.Id.GlutenFree);
+            CheckBox DairyFree = FindViewById<CheckBox>(Resource.Id.DairyFree);
+            CheckBox Vegetarian = FindViewById<CheckBox>(Resource.Id.Vegetarian);
             SetContentView(Resource.Layout.IndividualView);
 
             Button ButtonBackToResults = FindViewById<Button>(Resource.Id.btnBackToSearchResults);
@@ -122,7 +146,7 @@ namespace WeatherApp.Android
 
             if (!String.IsNullOrEmpty(SearchTermTextEntry.Text))
             {
-                Recipe recipe = await Core.GetRecipe(SearchTermTextEntry.Text);
+                Recipe recipe = await Core.GetRecipe(SearchTermTextEntry.Text, GlutenFree.Checked, DairyFree.Checked, Vegetarian.Checked);
                 if (recipe != null)
                 {
                     FindViewById<TextView>(Resource.Id.RecipeNameResult).Text = recipe.RecipeLabelContent2;
@@ -137,6 +161,9 @@ namespace WeatherApp.Android
         private async void ButtonResult3_Click(object sender, EventArgs e)
         {
             EditText SearchTermTextEntry = FindViewById<EditText>(Resource.Id.SearchTermTextEntry);
+            CheckBox GlutenFree = FindViewById<CheckBox>(Resource.Id.GlutenFree);
+            CheckBox DairyFree = FindViewById<CheckBox>(Resource.Id.DairyFree);
+            CheckBox Vegetarian = FindViewById<CheckBox>(Resource.Id.Vegetarian);
             SetContentView(Resource.Layout.IndividualView);
 
             Button ButtonBackToResults = FindViewById<Button>(Resource.Id.btnBackToSearchResults);
@@ -146,7 +173,7 @@ namespace WeatherApp.Android
 
             if (!String.IsNullOrEmpty(SearchTermTextEntry.Text))
             {
-                Recipe recipe = await Core.GetRecipe(SearchTermTextEntry.Text);
+                Recipe recipe = await Core.GetRecipe(SearchTermTextEntry.Text, GlutenFree.Checked, DairyFree.Checked, Vegetarian.Checked);
                 if (recipe != null)
                 {
                     FindViewById<TextView>(Resource.Id.RecipeNameResult).Text = recipe.RecipeLabelContent3;
@@ -161,6 +188,9 @@ namespace WeatherApp.Android
         private async void ButtonResult4_Click(object sender, EventArgs e)
         {
             EditText SearchTermTextEntry = FindViewById<EditText>(Resource.Id.SearchTermTextEntry);
+            CheckBox GlutenFree = FindViewById<CheckBox>(Resource.Id.GlutenFree);
+            CheckBox DairyFree = FindViewById<CheckBox>(Resource.Id.DairyFree);
+            CheckBox Vegetarian = FindViewById<CheckBox>(Resource.Id.Vegetarian);
             SetContentView(Resource.Layout.IndividualView);
 
             Button ButtonBackToResults = FindViewById<Button>(Resource.Id.btnBackToSearchResults);
@@ -170,7 +200,7 @@ namespace WeatherApp.Android
 
             if (!String.IsNullOrEmpty(SearchTermTextEntry.Text))
             {
-                Recipe recipe = await Core.GetRecipe(SearchTermTextEntry.Text);
+                Recipe recipe = await Core.GetRecipe(SearchTermTextEntry.Text, GlutenFree.Checked, DairyFree.Checked, Vegetarian.Checked);
                 if (recipe != null)
                 {
                     FindViewById<TextView>(Resource.Id.RecipeNameResult).Text = recipe.RecipeLabelContent4;
@@ -185,6 +215,9 @@ namespace WeatherApp.Android
         private async void ButtonResult5_Click(object sender, EventArgs e)
         {
             EditText SearchTermTextEntry = FindViewById<EditText>(Resource.Id.SearchTermTextEntry);
+            CheckBox GlutenFree = FindViewById<CheckBox>(Resource.Id.GlutenFree);
+            CheckBox DairyFree = FindViewById<CheckBox>(Resource.Id.DairyFree);
+            CheckBox Vegetarian = FindViewById<CheckBox>(Resource.Id.Vegetarian);
             SetContentView(Resource.Layout.IndividualView);
 
             Button ButtonBackToResults = FindViewById<Button>(Resource.Id.btnBackToSearchResults);
@@ -194,7 +227,7 @@ namespace WeatherApp.Android
 
             if (!String.IsNullOrEmpty(SearchTermTextEntry.Text))
             {
-                Recipe recipe = await Core.GetRecipe(SearchTermTextEntry.Text);
+                Recipe recipe = await Core.GetRecipe(SearchTermTextEntry.Text, GlutenFree.Checked, DairyFree.Checked, Vegetarian.Checked);
                 if (recipe != null)
                 {
                     FindViewById<TextView>(Resource.Id.RecipeNameResult).Text = recipe.RecipeLabelContent5;

@@ -24,11 +24,6 @@ namespace WeatherApp
         public string RecipeImageURL3 { get; set; } = " ";
         public string RecipeImageURL4 { get; set; } = " ";
         public string RecipeImageURL5 { get; set; } = " ";
-        public string CookingInstructions1 { get; set; } = " ";
-        public string CookingInstructions2 { get; set; } = " ";
-        public string CookingInstructions3 { get; set; } = " ";
-        public string CookingInstructions4 { get; set; } = " ";
-        public string CookingInstructions5 { get; set; } = " ";
         public string CountOfResults { get; set; } = " ";
     }
 }
