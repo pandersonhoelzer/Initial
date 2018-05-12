@@ -32,4 +32,3 @@ C:\Users\Peter\OneDrive\Desktop\Weather\Weather\WeatherApp\obj\Debug\netstandard
 C:\Users\Peter\OneDrive\Desktop\Weather\Weather\WeatherApp\obj\Debug\netstandard2.0\WeatherApp.AssemblyInfo.cs
 C:\Users\Peter\OneDrive\Desktop\Weather\Weather\WeatherApp\obj\Debug\netstandard2.0\WeatherApp.dll
 C:\Users\Peter\OneDrive\Desktop\Weather\Weather\WeatherApp\obj\Debug\netstandard2.0\WeatherApp.pdb
-C:\Users\Peter\OneDrive\Desktop\Weather\Weather\WeatherApp\obj\Debug\netstandard2.0\WeatherApp.csprojResolveAssemblyReference.cache

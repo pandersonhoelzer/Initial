@@ -39,21 +39,21 @@
             android:text="Gluten-Free"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/LowSodium"
-            android:id="@+id/GlutenFree"
-            android:checked="true" />
+            android:layout_toRightOf="@id/LowSodium"
+            android:layout_below="@id/SearchTermTextEntry"
+            android:id="@+id/GlutenFree"/>
         <CheckBox
             android:text="Dairy-Free"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/GlutenFree"
-            android:id="@+id/DairyFree"
-            android:checked="true" />
+            android:id="@+id/DairyFree" />
         <CheckBox
             android:text="Vegetarian"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/DairyFree"
+            android:layout_toRightOf="@id/DairyFree"
+            android:layout_below="@id/GlutenFree"
             android:id="@+id/Vegetarian" />
         <Button
             android:text="Get Results"

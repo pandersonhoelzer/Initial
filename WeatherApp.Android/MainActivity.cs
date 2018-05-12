@@ -126,7 +126,6 @@ namespace WeatherApp.Android
                     FindViewById<TextView>(Resource.Id.RecipeNameResult).Text = recipe.RecipeLabelContent1;
                     FindViewById<TextView>(Resource.Id.IngredientsResult).Text = recipe.IngredientsContent1;
                     FindViewById<TextView>(Resource.Id.WebAddressResult).Text = recipe.RecipeURL1;
-                    FindViewById<TextView>(Resource.Id.RecipeImagePlaceholder).Text = recipe.RecipeImageURL1;
                 }
             }
         }
@@ -152,7 +151,6 @@ namespace WeatherApp.Android
                     FindViewById<TextView>(Resource.Id.RecipeNameResult).Text = recipe.RecipeLabelContent2;
                     FindViewById<TextView>(Resource.Id.IngredientsResult).Text = recipe.IngredientsContent2;
                     FindViewById<TextView>(Resource.Id.WebAddressResult).Text = recipe.RecipeURL2;
-                    FindViewById<TextView>(Resource.Id.RecipeImagePlaceholder).Text = recipe.RecipeImageURL2;
 
                 }
             }
@@ -179,7 +177,6 @@ namespace WeatherApp.Android
                     FindViewById<TextView>(Resource.Id.RecipeNameResult).Text = recipe.RecipeLabelContent3;
                     FindViewById<TextView>(Resource.Id.IngredientsResult).Text = recipe.IngredientsContent3;
                     FindViewById<TextView>(Resource.Id.WebAddressResult).Text = recipe.RecipeURL3;
-                    FindViewById<TextView>(Resource.Id.RecipeImagePlaceholder).Text = recipe.RecipeImageURL3;
 
                 }
             }
@@ -206,7 +203,6 @@ namespace WeatherApp.Android
                     FindViewById<TextView>(Resource.Id.RecipeNameResult).Text = recipe.RecipeLabelContent4;
                     FindViewById<TextView>(Resource.Id.IngredientsResult).Text = recipe.IngredientsContent4;
                     FindViewById<TextView>(Resource.Id.WebAddressResult).Text = recipe.RecipeURL4;
-                    FindViewById<TextView>(Resource.Id.RecipeImagePlaceholder).Text = recipe.RecipeImageURL4;
 
                 }
             }
@@ -233,7 +229,6 @@ namespace WeatherApp.Android
                     FindViewById<TextView>(Resource.Id.RecipeNameResult).Text = recipe.RecipeLabelContent5;
                     FindViewById<TextView>(Resource.Id.IngredientsResult).Text = recipe.IngredientsContent5;
                     FindViewById<TextView>(Resource.Id.WebAddressResult).Text = recipe.RecipeURL5;
-                    FindViewById<TextView>(Resource.Id.RecipeImagePlaceholder).Text = recipe.RecipeImageURL5;
 
                 }
             }

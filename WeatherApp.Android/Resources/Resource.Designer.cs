@@ -2802,20 +2802,20 @@ namespace WeatherApp.Android
 			// aapt resource value: 0x7f0800bd
 			public const int GlutenFree = 2131230909;
 			
+			// aapt resource value: 0x7f080084
+			public const int IngredientsLabel = 2131230852;
+			
 			// aapt resource value: 0x7f080085
-			public const int IngredientsLabel = 2131230853;
+			public const int IngredientsResult = 2131230853;
 			
 			// aapt resource value: 0x7f080086
-			public const int IngredientsResult = 2131230854;
+			public const int InstructionsLabel = 2131230854;
 			
 			// aapt resource value: 0x7f0800bc
 			public const int LowSodium = 2131230908;
 			
 			// aapt resource value: 0x7f0800ba
 			public const int NameSearchLabel = 2131230906;
-			
-			// aapt resource value: 0x7f080084
-			public const int RecipeImagePlaceholder = 2131230852;
 			
 			// aapt resource value: 0x7f080082
 			public const int RecipeNameLabel = 2131230850;

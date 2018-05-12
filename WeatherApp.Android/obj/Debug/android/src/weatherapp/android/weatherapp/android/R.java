@@ -3026,11 +3026,11 @@ containing a value of this type.
         public static final int CountOfResults=0x7f0800c1;
         public static final int DairyFree=0x7f0800be;
         public static final int GlutenFree=0x7f0800bd;
-        public static final int IngredientsLabel=0x7f080085;
-        public static final int IngredientsResult=0x7f080086;
+        public static final int IngredientsLabel=0x7f080084;
+        public static final int IngredientsResult=0x7f080085;
+        public static final int InstructionsLabel=0x7f080086;
         public static final int LowSodium=0x7f0800bc;
         public static final int NameSearchLabel=0x7f0800ba;
-        public static final int RecipeImagePlaceholder=0x7f080084;
         public static final int RecipeNameLabel=0x7f080082;
         public static final int RecipeNameResult=0x7f080083;
         public static final int SearchBtn=0x7f0800c0;
